@@ -99,17 +99,15 @@ class PaymentPage
 
 	void calc(int k)
 	{
-		for(int i=0;i<pizza.cur_cart.size();i++)
-		{
-				amount +=pizza.price[pizza.cur_cart.get(i)];
-		}
 		percentage(k);
 		options2();
 	}
 
 	void percentage(int k)
 	{
+		System.out.println(amount);
 		amount -= ((k*amount)/100);
+		System.out.println(amount);
 	}
 
 	void options2()
@@ -136,5 +134,5 @@ class PaymentPage
 		pizza.welcomePage(pizza);
 	}
 
-
+ 
 }
