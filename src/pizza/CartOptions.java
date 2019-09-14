@@ -2,7 +2,7 @@ package pizza;
 
 import java.util.*;
 
-class D
+class CartOptions
 {
 	static String s[]=new String[3];
 	static

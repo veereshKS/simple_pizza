@@ -79,7 +79,7 @@ class  Pizza extends PaymentPage
 		System.out.print("total amount ");
 		System.out.printf("%25.25s%n",amount);
 		System.out.println("---------------------choose one option------------------------");
-		int j=D.dispCartMethod(cur_cart);
+		int j=CartOptions.dispCartMethod(cur_cart);
 		//j--;
 		int ch=s.nextInt();
 		if(j==3)
