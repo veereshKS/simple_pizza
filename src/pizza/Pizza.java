@@ -143,7 +143,7 @@ class  Pizza extends PaymentPage
 			case   8:
 			case   9:
 			case   10 : addCart(k);
-												 System.out.println("choose option\n 1 : add more pizza\n 2 : view cart\n 3 :proceed payment  ");
+												 System.out.println("choose option\n 1 : add more pizza\n 2 : view cart\n 3 : proceed payment  ");
 												 l=s.nextInt();
 												 switch(l)
 												{

@@ -23,8 +23,10 @@ class PaymentPage
 		{
 			amount +=pizza.price[pizza.cur_cart.get(i)];
 		}
+		System.out.println("the items you have selected are");
+		displyItems();
 		System.out.println("--------------------------------------------------------");
-		System.out.println("the total amount \t\t\t "+amount+"rs");
+		System.out.println("the total amount \t\t  "+amount+"rs");
 		System.out.println("--------------------------------------------------------");
 		int j=options();
 		int ch=s.nextInt();
@@ -55,6 +57,21 @@ class PaymentPage
 		}
 	}
 
+	void displyItems()
+	{
+		System.out.println( "no\tPizza\t\t\tprice");
+		int v=1;
+		for(int i=0;i<pizza.cur_cart.size();i++)
+		{
+				System.out.printf("%-2.2s %-30.30s %2.30s%n",v,pizza.name[pizza.cur_cart.get(i)],pizza.price[pizza.cur_cart.get(i)]);
+			v++;
+		}
+		double temp=(18*amount)/100;   	// applying GST of 18% to amount
+		System.out.printf("GST  18%% %29.1f\n",temp);
+		System.out.printf("Delivery charges %21.1f\n",20.0);
+		amount +=temp+20;		//adding both GST and Delivery charges
+	}
+	
 	int options()
 	{
 		if(pizza.cur_cart.size()>0)
