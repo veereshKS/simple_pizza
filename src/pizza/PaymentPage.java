@@ -1,11 +1,13 @@
 package pizza;
 
+import java.text.DecimalFormat;
 import java.util.*;
 
 class PaymentPage 
 {
 	Pizza pizza;
 	Scanner s=new Scanner(System.in);
+	DecimalFormat ft = new DecimalFormat("##.##");
 	double amount=0;
 	int vocher;
 	String vochers[]= new String[3];
@@ -26,7 +28,7 @@ class PaymentPage
 		System.out.println("the items you have selected are");
 		displyItems();
 		System.out.println("--------------------------------------------------------");
-		System.out.println("the total amount \t\t  "+amount+"rs");
+		System.out.println("the total amount \t\t  "+ft.format(amount)+"rs");
 		System.out.println("--------------------------------------------------------");
 		int j=options();
 		int ch=s.nextInt();
@@ -122,15 +124,13 @@ class PaymentPage
 
 	void percentage(int k)
 	{
-		System.out.println(amount);
-		amount -= ((k*amount)/100);
-		System.out.println(amount);
+		amount -= ((k*amount)/100); // calculating the percentage 
 	}
 
 	void options2()
 	{
 		System.out.println("\n\n--------------------------------------------------------");
-		System.out.println("the total amount \t\t\t "+amount+"rs");
+		System.out.println("the total amount \t\t\t "+ft.format(amount)+"rs");
 		System.out.println("--------------------------------------------------------");
 		System.out.println("choose one option\n1 : view cart\n2 : check out");
 		int ch = s.nextInt();

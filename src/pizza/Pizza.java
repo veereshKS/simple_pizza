@@ -109,7 +109,7 @@ class  Pizza extends PaymentPage
 	void welcomePage(Pizza cust)
 	{
 		cus=cust;
-		System.out.println("--------------------------WELCOME    TO     DOMINOS     PIZZZA---------------------\n\n");
+		System.out.println("--------------------------WELCOME    TO     CHARLE'S     PIZZZA---------------------\n\n");
 		System.out.println("choose option");
 		System.out.println("1 : pizza list ");
 		System.out.println("2 : exit");
@@ -161,6 +161,7 @@ class  Pizza extends PaymentPage
 			default : System.out.println("----------------invalid----------------");
 			add();
 		}
+		s.close();
 	}
 
 
