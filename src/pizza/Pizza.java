@@ -6,32 +6,31 @@ class  Pizza extends PaymentPage
 {
 	Scanner s=new Scanner(System.in);
 	Pizza cus;
-	String name[]=new String[11];
-	double price[]=new double[11];
+	String pizzaName[]=new String[11];
+	double pizzaPrice[]=new double[11];
 	ArrayList<Integer> cur_cart=new ArrayList<Integer>();
-	int f;
 	int amount =0;
 	{
-		name[1]="Margherita";
-		name[2]="Double Cheese Margherita";
-		name[3]="Farm House";
-		name[4]="Peppy Paneer";
-		name[5]="Mexican Green Wave";
-		name[6]="PEPPER BARBECUE CHICKEN";
-		name[7]="CHICKEN SAUSAGE";
-		name[8]="Chicken Golden Delight";
-		name[9]="Non Veg Supreme";
-		name[10]="Chicken Dominator";
-		price[1]=80;
-		price[2]=110;
-		price[3]=220;
-		price[4]=200;
-		price[5]=300;
-		price[6]=140;
-		price[7]=100;
-		price[8]=230;
-		price[9]=300;
-		price[10]=350;
+		pizzaName[1]="Margherita";
+		pizzaName[2]="Double Cheese Margherita";
+		pizzaName[3]="Farm House";
+		pizzaName[4]="Peppy Paneer";
+		pizzaName[5]="Mexican Green Wave";
+		pizzaName[6]="PEPPER BARBECUE CHICKEN";
+		pizzaName[7]="CHICKEN SAUSAGE";
+		pizzaName[8]="Chicken Golden Delight";
+		pizzaName[9]="Non Veg Supreme";
+		pizzaName[10]="Chicken Dominator";
+		pizzaPrice[1]=80;
+		pizzaPrice[2]=110;
+		pizzaPrice[3]=220;
+		pizzaPrice[4]=200;
+		pizzaPrice[5]=300;
+		pizzaPrice[6]=140;
+		pizzaPrice[7]=100;
+		pizzaPrice[8]=230;
+		pizzaPrice[9]=300;
+		pizzaPrice[10]=350;
 	}
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
    
@@ -40,7 +39,7 @@ class  Pizza extends PaymentPage
 	{
 		System.out.println( "no\tPizza\t\t\tprice");
 		for(int i=1;i<=10;i++)
-		System.out.printf("%-2.2s %-30.30s %-30.30s%n",i,name[i],price[i]);
+		System.out.printf("%-2.2s %-30.30s %-30.30s%n",i,pizzaName[i],pizzaPrice[i]);
 	}
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	void addCart(int k)
@@ -65,15 +64,13 @@ class  Pizza extends PaymentPage
 		System.out.println("\n\n the items which are present in cart is");
 		int len=cur_cart.size();
 		System.out.println( "no\tPizza\t\t\tprice");
-		int v=1;
 		for(int i=0;i<len;i++)
 		{
-				System.out.printf("%-2.2s %-30.30s %-30.30s%n",v,name[cur_cart.get(i)],price[cur_cart.get(i)]);
-			v++;
+				System.out.printf("%-2.2s %-30.30s %-30.30s%n",i+1,pizzaName[cur_cart.get(i)],pizzaPrice[cur_cart.get(i)]);
 		}
 		for(int i=0;i<len;i++)
 		{
-				amount +=price[cur_cart.get(i)];
+				amount +=pizzaPrice[cur_cart.get(i)];
 		}
 		System.out.println("------------------------------------------------------------------------------------------");
 		System.out.print("total amount ");

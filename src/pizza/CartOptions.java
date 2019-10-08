@@ -7,7 +7,7 @@ class CartOptions
 	static String s[]=new String[3];
 	static
 	{
-		s[0]=" : delet items from cart";
+		s[0]=" : delete items from cart";
 		s[1]=" : add items to cart";
 		s[2]=" : proceed payment";
 	}
